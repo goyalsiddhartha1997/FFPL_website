@@ -63,7 +63,7 @@ export const useCasePages: Record<string, UseCasePageContent> = {
     title: 'PACKED FOODS',
     heading: 'Packed Foods',
     bg: 'https://images.unsplash.com/photo-1621972750749-0fbb1abb7736?q=80&w=1200&auto=format&fit=crop',
-    image: 'https://assets.zyrosite.com/efGNDncQ59bzjOd5/packed-foods-fC5jna8VtLJb4z5p.png',
+    image: 'https://assets.zyrosite.com/efGNDncQ59bzjOd5/wmremove-transformed-1-8rD77EowxXWpzTgK.webp',
     paragraphs: [
       {
         title: 'Introduction',

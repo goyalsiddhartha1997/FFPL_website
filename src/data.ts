@@ -35,7 +35,7 @@ export const useCases: UseCase[] = [
     id: 'packed-foods',
     title: 'Packed Foods',
     text: "When your product line includes a diverse range of consumer goods, it's essential to partner with a packaging supplier who can fulfill your evolving needs for packaging pouches. We offer versatile packaging solutions for products ranging from as small as 1 gram up to 20 kilograms, allowing you to present your entire product range effectively without compromising on your brand's consistent theme or the quality of your packaging.",
-    image: 'https://assets.zyrosite.com/efGNDncQ59bzjOd5/packed-foods-fC5jna8VtLJb4z5p.png',
+    image: 'https://assets.zyrosite.com/efGNDncQ59bzjOd5/wmremove-transformed-1-8rD77EowxXWpzTgK.webp',
     link: '/packed-foods-packaging'
   },
   {
