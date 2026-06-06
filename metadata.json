@@ -1,0 +1,6 @@
+{
+  "name": "Fortune Flexipack",
+  "description": "Premium manufacturer of high-quality flexible packaging, PP fabric rolls, BOPP and laminated bags in India.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
