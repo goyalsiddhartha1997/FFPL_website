@@ -302,7 +302,7 @@ export default function App() {
             
             <div className="relative border border-gray-100 rounded-2xl overflow-hidden shadow-xl aspect-video lg:aspect-square max-h-[480px]">
               <img 
-                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=800&auto=format&fit=crop" 
+                src="https://i.imgur.com/AG5jefd.jpeg" 
                 alt="Automatic packaging extruder" 
                 className="w-full h-full object-cover"
               />
