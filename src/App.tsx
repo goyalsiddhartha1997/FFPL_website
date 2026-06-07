@@ -80,6 +80,9 @@ export default function App() {
     if (useCasePages[path] || productPages[path]) {
       return true;
     }
+    if (path.startsWith('/machinery/')) {
+      return true;
+    }
     return false;
   };
 
