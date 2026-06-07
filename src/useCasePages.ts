@@ -95,7 +95,7 @@ export const useCasePages: Record<string, UseCasePageContent> = {
     title: 'PULSES',
     heading: 'Pulses',
     bg: 'https://images.unsplash.com/photo-1547825407-2d060104b7c8?q=80&w=1200&auto=format&fit=crop',
-    image: 'https://assets.zyrosite.com/efGNDncQ59bzjOd5/pulses-dqxZHRruhU4llbZS.png',
+    image: 'https://i.imgur.com/qRHTjwZ.jpeg',
     paragraphs: [
       {
         title: 'Introduction',
@@ -111,7 +111,7 @@ export const useCasePages: Record<string, UseCasePageContent> = {
     title: 'SUGAR',
     heading: 'Sugar',
     bg: 'https://images.unsplash.com/photo-1622484211148-716598e04141?q=80&w=1200&auto=format&fit=crop',
-    image: 'https://assets.zyrosite.com/efGNDncQ59bzjOd5/sugar-onscVmSdBj3xJd4p.png',
+    image: 'https://i.imgur.com/PucdSBj.jpeg',
     paragraphs: [
       {
         title: 'Introduction',
@@ -127,7 +127,7 @@ export const useCasePages: Record<string, UseCasePageContent> = {
     title: 'DETERGENT',
     heading: 'Detergent',
     bg: 'https://images.unsplash.com/photo-1517646287270-a5a9ca602e5c?q=80&w=1200&auto=format&fit=crop',
-    image: 'https://assets.zyrosite.com/efGNDncQ59bzjOd5/detergent-1UllCMHmSC8DQEdw.png',
+    image: 'https://i.imgur.com/xl6YGOG.jpeg',
     paragraphs: [
       {
         title: 'Introduction',

@@ -44,6 +44,7 @@ import {
 } from './data';
 import { useCasePages } from './useCasePages';
 import { productPages } from './productPages';
+import { machineryPages } from './machineryPages';
 
 export default function App() {
   const [currentPath, setCurrentPath] = useState(() => {
@@ -1064,26 +1065,40 @@ export default function App() {
         gsm: string;
         uv: string;
         form: string;
-      }
+      };
+      specLabels?: {
+        material?: string;
+        widths?: string;
+        gsm?: string;
+        uv?: string;
+        form?: string;
+      };
     }> = {
       'printed-laminated-rolls': {
         title: "PRINTED LAMINATED ROLLS",
-        subtitle: "PREMIUM SPEC / HIGH-BARRIER",
+        subtitle: "PREMIUM SPEC / HIGH-SPEED FFS",
         icon: Sparkles,
-        intro: "Premium quality laminated rolls manufactured with complimentary design consultation. Excellent barrier properties tailored to keep contents pristine and drive brand recognition on automated lines.",
+        intro: "High-performance multilayer roll stock manufactured with solventless lamination to prevent odor contamination. Engineered with low COF for seamless runs on high-speed automated FFS lines.",
         highlights: [
-          "Custom multi-color rotogravure printing up to 9 colors",
-          "Complimentary professional packaging design consultation",
-          "Superb protective barrier against oxygen, moisture, and dust",
-          "Wound with uniform tension across the width to prevent wrinkling",
-          "Gloss, matte, or combined custom finishes for supreme presence"
+          "Premium rotogravure printing up to 8-10 colors for exquisite graphics",
+          "Solventless dry lamination process ensures food-grade safety, zero aroma transfer",
+          "Superior heat-seal strength and barrier protection (moisture, aroma, gas, oxygen)",
+          "Formulated with optimal low/high slip properties to match custom machine speeds",
+          "Wound with uniform roll tension and flawless alignment to eliminate FFS wrinkling"
         ],
         specs: {
-          material: "LDPE, HST BOPP, CPP, Metalized PET, Aluminium Foil",
-          widths: "50 mm to 1300 mm roll width",
-          gsm: "Customized based on layered formulation",
-          uv: "High barrier light exclusion features",
-          form: "Wound reel roll ready for automatic FFS machines"
+          material: "BOPP, PET (Glossy/Matte), CPP, CO-EX PE, Nylon, Al Foil, Paper",
+          widths: "100 mm to 1200 mm (Standard Core IDs: 76 mm / 152 mm)",
+          gsm: "Customized structures (PET/PE, PET/MET PET/PE, BOPP/CPP, etc.)",
+          uv: "High barrier light exclusion & aroma retention",
+          form: "Printed laminated reels ready for automatic packaging systems"
+        },
+        specLabels: {
+          material: "SUBSTRATE MATERIAL",
+          widths: "WIDTHS / CORE SIZE",
+          gsm: "LAMINATED STRUCTURE",
+          uv: "BARRIER PROTECTION",
+          form: "SUPPLY FORM"
         }
       },
       'plain-laminated-rolls': {
@@ -1104,10 +1119,17 @@ export default function App() {
           gsm: "Tailored to specific content weight ranges",
           uv: "Available with custom barrier stabilizers on request",
           form: "Plain raw unprinted roll stock"
+        },
+        specLabels: {
+          material: "SUBSTRATE MATERIAL",
+          widths: "WIDTHS / SCALE",
+          gsm: "FILM THICKNESS",
+          uv: "BARRIER STABILIZER",
+          form: "SUPPLY FORM"
         }
       },
       'hdpepp-tapes-tap': {
-        title: "HDPE / PP TAPES (TAP)",
+        title: "PE/PP TAPES (TAP)",
         subtitle: "HIGH-TENACITY BASE SPEC",
         icon: Cpu,
         intro: "Referred to as the 'soul of woven packaging', our high-tenacity tapes provide the precise architectural strength behind premium circular woven layouts, ensuring Zero burst safety under heavy load pressures.",
@@ -1119,11 +1141,18 @@ export default function App() {
           "Stable color fastness with customizable masterbatch additives"
         ],
         specs: {
-          material: "High Density Polyethylene (HDPE) / PP Virgin Blend",
-          widths: "Precision micro-slit ribbons",
-          gsm: "500 to 1500 Denier weight matrix",
-          uv: "UV protective additives integrated seamlessly",
-          form: "Precision wound spool pack ribbons"
+          material: "100% Virgin Polypropylene (PP) or High Density Polyethylene (HDPE)",
+          widths: "2.0 mm to 4.0 mm precision slit widths",
+          gsm: "450 to 2000 Denier tensile capacity",
+          uv: "Highly stabilized with UV inhibitors (up to 1600 hours on demand)",
+          form: "Precision wound ribbons on steel or paper bobbins"
+        },
+        specLabels: {
+          material: "POLYMER COMPOSITION",
+          widths: "TAPE WIDTH SIZE",
+          gsm: "TENACITY / DENIER",
+          uv: "UV STABILIZATION",
+          form: "SUPPLY FORMAT"
         }
       },
       'hdpepp-woven-fabrics-coateduncoated-wf': {
@@ -1139,11 +1168,18 @@ export default function App() {
           "Custom flat roll widths or tubular seamless sleeves"
         ],
         specs: {
-          material: "HDPE or Polypropylene (PP) Interlaced weave",
-          widths: "300 mm to 1200 mm customizable widths",
-          gsm: "45 GSM to 140 GSM fabric thickness",
-          uv: "Optional UV protection up to 1000 hours",
-          form: "Wound fabric rolls with perfect straight edge trimming"
+          material: "HDPE or Polypropylene (PP) circular interlaced weaves",
+          widths: "280 mm to 2000 mm flat circular width range",
+          gsm: "45 GSM to 150 GSM tailored fabric weight",
+          uv: "Coated/Uncoated with premium UV stabilization (up to 1000 hours)",
+          form: "Continuous rolls with edge-hemming or perfect straight edge trimming"
+        },
+        specLabels: {
+          material: "FABRIC STRUCTURE",
+          widths: "FABRIC WIDTH / SCALE",
+          gsm: "FABRIC GSM CAPACITY",
+          uv: "UV DURABILITY",
+          form: "SUPPLY FORM FORMAT"
         }
       },
       'pp-woven-bags-wpp': {
@@ -1159,11 +1195,18 @@ export default function App() {
           "High coefficient of friction to block sliding or falling in stacks"
         ],
         specs: {
-          material: "High Tenacity Polypropylene (PP)",
-          widths: "Custom preformed (30 cm to 90 cm width specs)",
-          gsm: "50 GSM to 130 GSM weight capacity",
-          uv: "Optional UV stabilizing compounds integrated as requested",
-          form: "Pre-cut and sewn open mouth sacks with plain print"
+          material: "Premium virgin Polypropylene (Woven PP base with LLDPE liner)",
+          widths: "300 mm to 900 mm flat widths (lengths customized as requested)",
+          gsm: "50 GSM to 140 GSM reinforced fabric weight",
+          uv: "Custom heat/UV protection compound options integrated",
+          form: "Cut & hemmed open-mouth sacks with double stitch lock"
+        },
+        specLabels: {
+          material: "SACK MATERIAL",
+          widths: "SACK BAG WIDTHS",
+          gsm: "BAG WEIGHT / GSM",
+          uv: "SUNLIGHT / UV RESISTANCE",
+          form: "FINISHED BAG FORMAT"
         }
       },
       'printed-and-laminated-woven-pp-bags-plwpp': {
@@ -1179,11 +1222,18 @@ export default function App() {
           "Excellent option for 5kg to 25kg premium grain packs"
         ],
         specs: {
-          material: "BOPP Film + Extruded Poly Lamination + PP Woven Fabric",
-          widths: "300 mm to 650 mm preformed sizes",
-          gsm: "70 GSM to 150 GSM ultra composites",
-          uv: "Lamination layer blocks incoming solar UV degradation",
-          form: "Custom printed high-resolution side-welded bags"
+          material: "BOPP Photographic Film + Polymer Lamination + Woven PP Fabric",
+          widths: "300 mm to 650 mm preformed panel sizes",
+          gsm: "60 GSM to 160 GSM composite laminated strength",
+          uv: "BOPP barrier + ink stabilization preventing color fade",
+          form: "Premium rotogravure printed bags (up to 8-10 colors)"
+        },
+        specLabels: {
+          material: "COMPOSITE MATERIAL",
+          widths: "BAG WIDTHS / SIZE",
+          gsm: "COMPOSITE GSM SCALE",
+          uv: "COLOR / UV PROTECTION",
+          form: "PRINTED SUPPLY FORM"
         }
       },
       'printed-and-laminated-woven-pp-bottom-gusset-bags': {
@@ -1199,11 +1249,18 @@ export default function App() {
           "Can incorporate custom die-cut carry handles or sliding zippers"
         ],
         specs: {
-          material: "BOPP Printed Film + High Strength PP Woven Base",
-          widths: "300 mm to 600 mm width matrix",
-          gsm: "70 GSM to 140 GSM reinforced specs",
-          uv: "Optimal pigment protection in laminated layers",
-          form: "Preformed stand-up bag with expandable gussets"
+          material: "High-clarity BOPP printed film over strong PP woven substrate",
+          widths: "250 mm to 600 mm width (Gusset depth: 50 mm to 150 mm)",
+          gsm: "70 GSM to 150 GSM heavily reinforced structures",
+          uv: "Sub-surface rotogravure ink shield against sunlight & fading",
+          form: "Preformed stand-up bag with heat seal/double-stitch"
+        },
+        specLabels: {
+          material: "COMPOSITE SUBSTRATE",
+          widths: "BAG WIDTHS & GUSSET",
+          gsm: "COMPOSITE THICKNESS / GSM",
+          uv: "LIGHT & UV SECURE",
+          form: "FINISHED SUPPLY FORMAT"
         }
       },
       'printed-and-laminated-woven-pp-retail-shopping-bags': {
@@ -1219,11 +1276,18 @@ export default function App() {
           "Folds down completely flat for easy compact bag storage"
         ],
         specs: {
-          material: "Laminated Woven PP / Eco-Friendly Non-Woven PP",
-          widths: "250 mm to 500 mm retail width ranges",
-          gsm: "80 GSM to 160 GSM premium thickness",
-          uv: "UV protected color pigments utilized",
-          form: "Finished tote bag with cross-stitched handles"
+          material: "Gloss/Matte Laminated Woven PP or Non-Woven Eco Polymer",
+          widths: "250 mm to 500 mm flat widths (With side/bottom gusset)",
+          gsm: "80 GSM to 160 GSM premium reusable density",
+          uv: "UV fade-resistant high adhesion color pigments",
+          form: "Complete tote bag with cross-stitched webbing loop handles"
+        },
+        specLabels: {
+          material: "BAG FABRIC MATERIAL",
+          widths: "RETAIL BAG WIDTH / SCALE",
+          gsm: "REUSED BARRIER / GSM",
+          uv: "INK UV COLOR PROTECTION",
+          form: "SHOPPING TOTE FORMAT"
         }
       },
       'reprocessed-granules-rp': {
@@ -1239,11 +1303,18 @@ export default function App() {
           "Suitable for plastic injection household goods and car parts"
         ],
         specs: {
-          material: "100% Recycled Polypropylene (PP)",
+          material: "100% Reprocessed Homopolymer Polypropylene (Recycled PP)",
           widths: "2.5 mm to 4.0 mm uniform pellet cuts",
-          gsm: "Tailored Melt Flow Index (MFI) values",
-          uv: "Optional custom UV stabilizer additives",
-          form: "Free flowing granules packed in 25/50kg sack units"
+          gsm: "8 to 22 g/10 min engineered Melt Flow Index (MFI)",
+          uv: "Custom antioxidant filters and thermal process stabilizers",
+          form: "Free-flowing uniform pellets packed in 25/50kg sack units"
+        },
+        specLabels: {
+          material: "HOMOPOLYMER MATERIAL",
+          widths: "PELLET SIZE / DIAMETER",
+          gsm: "MELT FLOW INDEX (MFI)",
+          uv: "CHEMICAL FILTERS / UV",
+          form: "PACKAGING SUPPLY BAGS"
         }
       }
     };
@@ -1393,7 +1464,7 @@ export default function App() {
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8">
                       <div className="space-y-1">
                         <span className="text-slate-400 font-mono text-[10px] uppercase font-bold tracking-wider block">
-                          MATERIAL
+                          {specData.specLabels?.material || "MATERIAL"}
                         </span>
                         <span className="text-slate-900 font-sans text-xs sm:text-sm font-bold block">
                           {specData.specs.material}
@@ -1402,7 +1473,7 @@ export default function App() {
 
                       <div className="space-y-1">
                         <span className="text-slate-400 font-mono text-[10px] uppercase font-bold tracking-wider block">
-                          WIDTHS / SCALE
+                          {specData.specLabels?.widths || "WIDTHS / SCALE"}
                         </span>
                         <span className="text-slate-900 font-sans text-xs sm:text-sm font-bold block">
                           {specData.specs.widths}
@@ -1411,7 +1482,7 @@ export default function App() {
 
                       <div className="space-y-1">
                         <span className="text-slate-400 font-mono text-[10px] uppercase font-bold tracking-wider block">
-                          GSM CAPACITY
+                          {specData.specLabels?.gsm || "GSM CAPACITY"}
                         </span>
                         <span className="text-slate-900 font-sans text-xs sm:text-sm font-bold block">
                           {specData.specs.gsm}
@@ -1420,7 +1491,7 @@ export default function App() {
 
                       <div className="space-y-1">
                         <span className="text-slate-400 font-mono text-[10px] uppercase font-bold tracking-wider block">
-                          UV STABILIZATION
+                          {specData.specLabels?.uv || "UV STABILIZATION"}
                         </span>
                         <span className="text-slate-900 font-sans text-xs sm:text-sm font-bold block">
                           {specData.specs.uv}
@@ -1429,7 +1500,7 @@ export default function App() {
 
                       <div className="space-y-1 sm:col-span-2">
                         <span className="text-slate-400 font-mono text-[10px] uppercase font-bold tracking-wider block">
-                          FORM FORMAT
+                          {specData.specLabels?.form || "FORM FORMAT"}
                         </span>
                         <span className="text-slate-900 font-sans text-xs sm:text-sm font-bold block">
                           {specData.specs.form}
@@ -1590,20 +1661,38 @@ export default function App() {
               {/* Technical block */}
               {pr.techDetails && (
                 <div className="space-y-4 border border-gray-150 p-6 rounded-xl">
-                  <h2 className="font-display text-lg font-bold text-brand-blue-dark">Technical details</h2>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 font-sans text-sm">
-                    {pr.techDetails.sizeRange && (
-                      <div className="space-y-1">
-                        <p className="text-gray-500 text-xs font-semibold uppercase tracking-wider">Size Range</p>
-                        <p className="font-mono text-brand-blue-dark font-semibold text-sm bg-gray-50 p-3 rounded border border-gray-100">{pr.techDetails.sizeRange}</p>
-                      </div>
-                    )}
-                    {pr.techDetails.materials && (
-                      <div className="space-y-1">
-                        <p className="text-gray-500 text-xs font-semibold uppercase tracking-wider">Materials Used</p>
-                        <p className="text-gray-700 leading-relaxed text-xs bg-gray-50 p-3 rounded border border-gray-100 font-mono">{pr.techDetails.materials}</p>
-                      </div>
-                    )}
+                  <h2 className="font-display text-lg font-bold text-brand-blue-dark">Technical Specifications & Details</h2>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 font-sans text-sm">
+                    {Object.entries(pr.techDetails).map(([key, val]) => {
+                      if (!val) return null;
+                      const techLabels: Record<string, string> = {
+                        sizeRange: "Size/Width Range",
+                        materials: "Material/Polymer Composition",
+                        thickness: "Thickness Scale",
+                        meshOfWeave: "Mesh Density Weave",
+                        denierRange: "Tenacity / Denier Matrix",
+                        laminationThickness: "Lamination Layer GSM",
+                        colorMasterbatch: "Color / Pigment Fastness",
+                        uvStabilization: "UV Durability / Sunlight Resistance",
+                        weightCapacity: "Load Weight Capacity",
+                        printingColors: "Printing Tech / Colors",
+                        bottomClosure: "Bottom Seam Closure",
+                        topMouthClosure: "Top Mouth Closure Style",
+                        gussetDepth: "Gusset Expansion Depth",
+                        meltFlowIndex: "Melt Flow Index (MFI)",
+                        ashContent: "Ash Content Purity",
+                        standardPacking: "Standard Packaging",
+                        productionCapacity: "Monthly Production Output",
+                        rawMaterialCombination: "Substrate / Foil Combinations"
+                      };
+                      const label = techLabels[key] || key.replace(/([A-Z])/g, ' $1').trim().toUpperCase();
+                      return (
+                        <div key={key} className="space-y-1 bg-gray-50/50 p-3 rounded border border-gray-100 flex flex-col justify-between">
+                          <p className="text-gray-500 text-[10px] font-bold uppercase tracking-wider">{label}</p>
+                          <p className="text-brand-blue-dark font-medium text-xs font-sans mt-0.5 leading-relaxed">{val}</p>
+                        </div>
+                      );
+                    })}
                   </div>
                 </div>
               )}
@@ -1664,6 +1753,113 @@ export default function App() {
                   className="bg-brand-accent hover:bg-brand-accent/90 text-white text-xs py-2.5 px-4 rounded font-bold w-full text-center block"
                 >
                   Get Quotes Now
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </section>
+      </div>
+    );
+  };
+
+  // Dynamics machinery page detail
+  const renderMachineryDetail = (route: string) => {
+    // Check if path starts with '/machinery/' (e.g. '/machinery/bcs-prime')
+    const key = route.replace('/machinery/', '');
+    const m = machineryPages[key];
+    if (!m) return <div className="p-16 text-center">Machinery Details Stale</div>;
+
+    return (
+      <div className="space-y-16 pb-16 animate-fade-in">
+        <section className="bg-brand-blue-dark text-white py-14 relative overflow-hidden">
+          <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:24px_24px]"></div>
+          <div className="relative max-w-7xl mx-auto px-4 md:px-6">
+            <span className="text-[#f05a28] font-mono text-xs font-bold tracking-widest uppercase">{m.label}</span>
+            <h1 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mt-1">{m.title}</h1>
+          </div>
+        </section>
+
+        <section className="max-w-7xl mx-auto px-4 md:px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+            
+            {/* Core Specs / Introduction */}
+            <div className="lg:col-span-7 space-y-10">
+              <div className="space-y-4">
+                <h2 className="font-display text-2xl font-bold text-brand-blue-dark">Overview & Operational Purpose</h2>
+                <div className="w-10 h-0.5 bg-[#f05a28]"></div>
+                <p className="text-gray-700 text-sm md:text-base leading-relaxed font-sans font-medium">
+                  {m.introduction}
+                </p>
+              </div>
+
+              {/* Performance Features */}
+              <div className="space-y-4 bg-gray-50 p-6 rounded-xl border border-gray-150">
+                <h2 className="font-display text-lg font-bold text-brand-blue-dark">{m.featuresTitle || "Core Performance & Operations"}</h2>
+                <ul className="grid grid-cols-1 gap-3.5 pt-2">
+                  {m.features.map((ft, idx) => (
+                    <li key={idx} className="flex items-start gap-2.5 text-xs sm:text-sm text-gray-700 font-sans font-medium leading-relaxed">
+                      <CheckCircle className="w-4 h-4 text-[#f05a28] shrink-0 mt-0.5" />
+                      <span>{ft}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Technical Specifications Block */}
+              {m.technicalSpecs && (
+                <div className="space-y-4 border border-gray-150 p-6 rounded-xl">
+                  <h2 className="font-display text-lg font-bold text-brand-blue-dark">Technical Parameters & Extrusion Blueprint</h2>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 font-sans text-sm">
+                    {Object.entries(m.technicalSpecs).map(([key, val]) => (
+                      <div key={key} className="space-y-1 bg-gray-50/50 p-3 rounded border border-gray-100 flex flex-col justify-between">
+                        <p className="text-gray-550 text-[10px] font-bold uppercase tracking-wider">{key}</p>
+                        <p className="text-brand-blue-dark font-medium text-xs font-sans mt-0.5 leading-relaxed">{val}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              <div className="pt-4 flex flex-wrap gap-4">
+                <button
+                  onClick={() => navigate('/machinery')}
+                  className="bg-gray-100 hover:bg-gray-200 text-brand-blue-dark font-semibold text-xs py-3.5 px-6 rounded-md cursor-pointer select-none"
+                >
+                  All Plant Equipment
+                </button>
+                <button
+                  onClick={() => navigate('/contact')}
+                  className="bg-[#f05a28] hover:bg-orange-600 text-white font-semibold text-xs py-3.5 px-6 rounded-md cursor-pointer select-none"
+                >
+                  Contact Technical Sales
+                </button>
+              </div>
+            </div>
+
+            {/* Sticky Sidebar */}
+            <div className="lg:col-span-5 space-y-6 lg:sticky lg:top-24">
+              <div className="aspect-4/3 rounded-xl overflow-hidden border border-gray-150 shadow-md bg-white">
+                <img 
+                  src={m.image} 
+                  alt={m.title} 
+                  referrerPolicy="no-referrer"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" 
+                />
+              </div>
+              
+              <div className="bg-[#0b1329] text-white p-6 rounded-xl space-y-4">
+                <h4 className="font-display text-sm font-semibold text-[#f05a28] uppercase tracking-wider">
+                  In-House Verification Certifications
+                </h4>
+                <p className="text-white/75 text-xs leading-relaxed font-sans">
+                  Our plant machinery conforms perfectly to ISO 9001:2015 frameworks and certified clean room systems. Chemical polymers are strictly logged within our airtight SAP S4 Hana database before processing.
+                </p>
+                <button 
+                  onClick={() => navigate('/contact')}
+                  className="bg-[#f05a28] hover:bg-orange-600 text-white text-xs py-2.5 px-4 rounded font-bold w-full text-center block"
+                >
+                  Schedule Unit Inspection
                 </button>
               </div>
             </div>
@@ -1785,6 +1981,10 @@ export default function App() {
         // Match dynamic products slugs
         if (productPages[path]) {
           return renderProductTypeDetail(path);
+        }
+        // Match dynamic machinery detail slugs
+        if (path.startsWith('/machinery/')) {
+          return renderMachineryDetail(path);
         }
         // Strict fallback
         return renderHome();

@@ -49,21 +49,21 @@ export const useCases: UseCase[] = [
     id: 'pulses',
     title: 'Pulses',
     text: "Pulses are an essential source of protein and play a crucial role in maintaining a healthy diet, supporting sustainable food production, and ensuring food security. India accounts for 35% of the world's production and consumption of pulses, making it a key player in the global pulse market. It is believed that chickpeas and Indian-type lentils may have been first domesticated in the Indian subcontinent, highlighting India's historical significance in pulse cultivation.",
-    image: 'https://assets.zyrosite.com/efGNDncQ59bzjOd5/pulses-dqxZHRruhU4llbZS.png',
+    image: 'https://i.imgur.com/qRHTjwZ.jpeg',
     link: '/pulses-packaging'
   },
   {
     id: 'sugar',
     title: 'Sugar',
     text: "Sugar, also known as sucrose, is a fundamental part of our daily diet, consumed in various forms every day. Although we often view sugar simply as a vital food ingredient, it is also a major industry that significantly impacts economies around the world. In India alone, the sugar sector provides livelihoods to over 50 million farmers, making it a crucial component of the agricultural economy.",
-    image: 'https://assets.zyrosite.com/efGNDncQ59bzjOd5/sugar-onscVmSdBj3xJd4p.png',
+    image: 'https://i.imgur.com/PucdSBj.jpeg',
     link: '/sugar-packaging'
   },
   {
     id: 'detergent',
     title: 'Detergent',
     text: "Detergent is used by everyone for washing clothes, utensils, or vehicles. In most Indian homes, the word detergent typically refers to laundry detergent rather than hand soap or other cleaning agents. Detergents are mostly available in powdered form. In India, four main types of detergents are used: anionic, cationic, amphoteric, and non-ionic.",
-    image: 'https://assets.zyrosite.com/efGNDncQ59bzjOd5/detergent-1UllCMHmSC8DQEdw.png',
+    image: 'https://i.imgur.com/xl6YGOG.jpeg',
     link: '/detergent-packaging'
   }
 ];
@@ -111,7 +111,7 @@ export const productsList: ProductType[] = [
   },
   {
     id: 'hdpepp-tapes-tap',
-    name: 'HDPE/PP Tapes (TAP)',
+    name: 'PE/PP Tapes (TAP)',
     url: '/hdpepp-tapes-tap',
     image: 'https://assets.zyrosite.com/efGNDncQ59bzjOd5/1-WkIxvIdRpvK70fHS.png',
     description: "In the world of woven packaging, the tape is considered as the soul of bags as the quality depends more or less on it.",
@@ -139,7 +139,7 @@ export const productsList: ProductType[] = [
     id: 'pp-woven-bags-wpp',
     name: 'PP Woven Bags (WPP)',
     url: '/pp-woven-bags-wpp',
-    image: 'https://assets.zyrosite.com/efGNDncQ59bzjOd5/1_1-NUAvjhV11UPUJ5Qt.png',
+    image: 'https://i.imgur.com/MC6tcnE.png',
     description: "Woven bags are manufactured with the help of Woven Fabric. These kinds of bags are widely used in the packaging industry.",
     benefits: [
       "High load-bearing capacity for agricultural and bulk storage",

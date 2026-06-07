@@ -33,7 +33,7 @@ export default function Header({ currentPath, navigate }: HeaderProps) {
   const productTypeLinks = [
     { name: 'Printed Laminated Rolls', path: '/printed-laminated-rolls' },
     { name: 'Plain Laminated Rolls', path: '/plain-laminated-rolls' },
-    { name: 'HDPE/PP Tapes (TAP)', path: '/hdpepp-tapes-tap' },
+    { name: 'PE/PP Tapes (TAP)', path: '/hdpepp-tapes-tap' },
     { name: 'HDPE/PP Woven Fabrics (WF)', path: '/hdpepp-woven-fabrics-coateduncoated-wf' },
     { name: 'PP Woven Bags (WPP)', path: '/pp-woven-bags-wpp' },
     { name: 'Printed and Laminated Woven PP Bags (PLWPP)', path: '/printed-and-laminated-woven-pp-bags-plwpp' },

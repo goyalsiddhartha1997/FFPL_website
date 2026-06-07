@@ -162,6 +162,78 @@ export default function Machinery({ navigate }: { navigate: (path: string) => vo
       calibrationText: 'CALIBRATION INTERVAL: WEEKLY AUTOMATED',
       safetyGrade: 'CERTIFIED FDA COMPLIANT',
       icon: Sliders
+    },
+    {
+      id: 'solvent-less-machine',
+      name: 'Solvent Less Machine',
+      stageWord: 'SOLVENT LESS',
+      category: 'barrier-lamination',
+      categoryLabel: 'Barrier Lamination',
+      description: 'High-speed, certified food-grade solvent-free lamination (Sololam PLUS). Operating at speeds up to 400-450 m/min, this eco-compliant system bonds multi-layer substrates with zero chemical retention or odor contamination.',
+      image: 'https://i.imgur.com/1PcYG45.jpeg',
+      specs: [
+        'Extreme production speed of up to 400 - 450 meters/minute',
+        '100% solid solvent-free resin with zero chemical odor transfer',
+        'Automatic dual-component polyurethane mixing and metering unit',
+        'Accoladed web tension controls for fragile, ultra-thin film webs'
+      ],
+      calibrationText: 'CALIBRATION INTERVAL: EVERY SHIFT SENSOR',
+      safetyGrade: 'CERTIFIED FOOD GRADE',
+      icon: Gauge
+    },
+    {
+      id: 'solvent-base-machine',
+      name: 'Solvent Base Machine',
+      stageWord: 'SOLVENT BASE',
+      category: 'barrier-lamination',
+      categoryLabel: 'Barrier Lamination',
+      description: 'Dry bond solvent-based lamination machine (Sololam SB) designed for heavy-duty industrial barriers, chemical retort films, nylon, and metalized composites.',
+      image: 'https://i.imgur.com/elecuYR.jpeg',
+      specs: [
+        'Production speed of up to 350 - 400 meters/minute',
+        'Multi-stage dry lamination process securing extreme peel strength',
+        'Thermal multi-zone drying tunnel with independent digital airflow',
+        'Full-automatic turret unwinder/rewinder with splice mechanics'
+      ],
+      calibrationText: 'CALIBRATION INTERVAL: EVERY SHIFT SENSOR',
+      safetyGrade: 'THERMO RETORT STABLE',
+      icon: Layers
+    },
+    {
+      id: 'slitting-machine',
+      name: 'Slitting Machine',
+      stageWord: 'SLITTER',
+      category: 'barrier-lamination',
+      categoryLabel: 'Barrier Lamination',
+      description: 'Precision Turret Slitter & Rewinder running up to 500-600 m/min. Features automatic turret slicing rotations and differential friction shafts to prevent core wrinkling.',
+      image: 'https://i.imgur.com/dNtTSdq.jpeg',
+      specs: [
+        'Maximum mechanical velocity of up to 500 - 600 meters/minute',
+        'Differential winding shafts for thickness variance correction',
+        'Dual turret rewinding station rotating 180° for non-stop speed',
+        'BST web scanner guiding with razor and shear cutting knives'
+      ],
+      calibrationText: 'CALIBRATION INTERVAL: RUNTIME ENCODER',
+      safetyGrade: 'INDUSTRIAL PRECISION',
+      icon: Sliders
+    },
+    {
+      id: 'bcs-prime',
+      name: 'BCS (Bag Conversion System)',
+      stageWord: 'BCS',
+      category: 'bag-forming',
+      categoryLabel: 'Bag Conversion',
+      description: 'Computerized automated high-speed conversion line running at 45 to 55 bags/min. Executes servo-controlled fabric cutting, double bottom folding, and heavy lockstitching.',
+      image: 'https://i.imgur.com/tg8MH0Y.png',
+      specs: [
+        'High execution yield of 45 to 55 finished sacks per minute',
+        'Acupoint servo cutting system with integrated heat edge-cauterization',
+        'Union Special synchronized multi-needle bottom seaming station',
+        'Automated stacker separator and magnetic counting conveyors'
+      ],
+      calibrationText: 'CALIBRATION INTERVAL: REAL-TIME PLC FEED',
+      safetyGrade: 'CERTIFIED FDA COMPLIANT',
+      icon: Wrench
     }
   ];
 
@@ -259,7 +331,7 @@ export default function Machinery({ navigate }: { navigate: (path: string) => vo
               PRODUCTION MACHINERY<br />LIST
             </h2>
             <p className="text-neutral-500 text-xs sm:text-sm font-semibold font-sans">
-              7 elite in-house industrial lines certified for food-grade clean execution
+              11 elite in-house industrial lines certified for food-grade clean execution
             </p>
           </div>
           
@@ -390,6 +462,17 @@ export default function Machinery({ navigate }: { navigate: (path: string) => vo
                       </svg>
                       <span>{m.safetyGrade}</span>
                     </div>
+                  </div>
+
+                  {/* High-contrast Technical Details Button Linking to Individual Page */}
+                  <div className="mt-4 pt-1 flex justify-start">
+                    <button
+                      onClick={() => navigate(`/machinery/${m.id}`)}
+                      className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#0c152b] hover:bg-[#f05a28] text-white font-mono text-[10px] font-bold tracking-widest uppercase rounded-lg transition-all duration-300 shadow-sm cursor-pointer active:scale-[0.98] group"
+                    >
+                      <span>Explore Technical Machine Page</span>
+                      <ArrowUpRight className="w-4 h-4 text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                    </button>
                   </div>
 
                 </div>
