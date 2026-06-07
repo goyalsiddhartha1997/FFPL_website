@@ -15,3 +15,14 @@
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteRule . /index.html [L]
 </IfModule>
+
+# 3. Prevent extreme browser caching of index.html so updates are instant
+<FilesMatch "index\.html">
+  FileETag None
+  <IfModule mod_headers.c>
+    Header unset ETag
+    Header set Cache-Control "max-age=0, no-cache, no-store, must-revalidate"
+    Header set Pragma "no-cache"
+    Header set Expires "0"
+  </IfModule>
+</FilesMatch>
